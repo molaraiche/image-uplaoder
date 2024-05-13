@@ -3,9 +3,9 @@ const cloudinary = require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 cloudinary.config({
-  cloud_name: 'dkglanpln',
-  api_key: '436749385572845',
-  api_secret: '85MfkykF_QD10El-5F4hnIHMazc',
+  cloud_name: YOUR_CLOUDINARY_NAME,
+  api_key: YOUR_CLOUDINARY_API,
+  api_secret: YOUR_CLOUDINARY_API_SECRET,
 });
 
 const cloudinaryStorage = new CloudinaryStorage({
@@ -43,6 +43,8 @@ const fileFilter = (req, file, cb) => {
     cb(null, false);
   }
 };
+
+// To manage the uploader from here you need to set the name as how your model is in model.js ( for the specefic file), with the maxcount stuff depend on what u need
 
 const upload = multer({
   storage: cloudinaryStorage,
