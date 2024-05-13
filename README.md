@@ -1,2 +1,1 @@
-# image-uplaoder
-Multer Image Uploader script
+image-uplaoder-cloudinary
